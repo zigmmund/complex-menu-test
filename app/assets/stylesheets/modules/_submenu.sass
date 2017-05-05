@@ -31,11 +31,11 @@
 
     &--medium
       min-width: 600px
-      left: -250%
+      left: -215%
 
     &--large
       min-width: 780px
-      left: -270%
+      left: -235%
 
   li
     display: flex
@@ -47,12 +47,12 @@
 
     &:hover
       > a
-        background-color: #E6F7FF
+        background-color: $linksHoverBg
         border-radius: 4px
-        color: #0086CE
+        color: $mainBlue
 
     a
-      color: #0086CE
+      color: $mainBlue
       font-weight: 400
       padding: 10px 20px 10px 40px
 
@@ -61,7 +61,7 @@
 
       @include atSmall
         display: block
-        color: #616673
+        color: $mainGray
 
   &--products
 
@@ -123,12 +123,12 @@
         border-radius: 4px
 
         &:hover
-          background-color: #E6F7FF
+          background-color: $linksHoverBg
 
         > a
           margin-left: 0
           padding: 10px 20px 10px 10px
-          color: #0091D9
+          color: $mainBlue
 
           > div
             background-image: none
@@ -189,7 +189,7 @@
             content: ''
             width: 4px
             height: 4px
-            background-color: #8D95A6
+            background-color: $mainGray
             border-radius: 50%
             position: absolute
             left: 0
