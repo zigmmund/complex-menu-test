@@ -1,0 +1,218 @@
+.submenu
+  display: none
+  position: absolute
+  top: 40px
+  padding: 10px 25px
+  background-color: #fff
+  border-bottom: 1px solid rgba(141,149,166, .2)
+  flex-wrap: wrap
+
+  @include clearfix
+
+  @include atMedium
+    border-radius: 4px
+    padding: 20px 20px 0
+
+    &:before
+      content: ''
+      width: 0
+      height: 0
+      position: absolute
+      top: -5px
+      left: 50%
+      transform: translateX(-50%)
+      border-left: 5px solid transparent
+      border-right: 5px solid transparent
+      border-bottom: 5px solid #fff
+
+    &--small
+      min-width: 400px
+      left: -150%
+
+    &--medium
+      min-width: 600px
+      left: -250%
+
+    &--large
+      min-width: 780px
+      left: -270%
+
+  li
+    display: flex
+    float: left
+    margin: 0
+    padding: 0
+    width: 50%
+    position: relative
+
+    &:hover
+      > a
+        background-color: #E6F7FF
+        border-radius: 4px
+        color: #0086CE
+
+    a
+      color: #0086CE
+      font-weight: 400
+      padding: 10px 20px 10px 40px
+
+    p
+      display: none
+
+      @include atSmall
+        display: block
+        color: #616673
+
+  &--products
+
+    > li
+      width: 100%
+      float: none
+      > a
+        width: 100%
+
+      @include atSmall
+        width: 50%
+        float: left
+        > a
+          width: auto
+
+  &--company
+    padding: 20px
+
+    li
+      > a
+        padding: 10px 20px 10px 10px
+        @include atSmall
+          padding: 10px 20px 10px 40px
+
+        > div
+          background-image: none
+          @include atSmall
+            background-image: url('sprite')
+
+      &:hover
+        > a
+          width: 100%
+
+  &--credit-cards
+
+    > li
+      @include atMedium
+        width: 33%
+
+      &:hover
+        > a
+          width: auto
+
+  &__inner
+    width: 100%
+    padding: 0
+    margin: 0
+
+    > li
+      width: 100%
+      display: none
+
+      > a
+        padding: 10px 20px 10px 10px
+        margin-left: 40px
+
+      &.dropdown-header
+        display: block
+        border-radius: 4px
+
+        &:hover
+          background-color: #E6F7FF
+
+        > a
+          margin-left: 0
+          padding: 10px 20px 10px 10px
+          color: #0091D9
+
+          > div
+            background-image: none
+
+            @include atSmall
+              background-image: url('sprite')
+
+          > span
+            display: none
+            @include atSmall
+              display: inline
+
+          @include atSmall
+            padding: 10px 20px 10px 50px
+
+        @include atMedium
+          border-radius: 0
+
+          &:hover
+            background-color: #fff
+
+          > a
+            color: #36364D
+            background-color: #fff
+
+    @include atMedium
+
+      > li
+        display: block
+
+  &__inner__middle
+
+    > li
+
+      &.card-holder
+        flex-direction: column
+        padding: 0 20px 0 50px
+
+        p
+          font-size: 0.875rem
+
+        img
+          width: 131px
+          height: auto
+          overflow: hidden
+
+      &.with-bullet-point
+        padding: 10px 20px 10px 50px
+
+        p
+          margin: 0
+          padding-left: 10px
+          font-weight: 400
+          font-size: 0.75rem
+          position: relative
+
+          &:before
+            content: ''
+            width: 4px
+            height: 4px
+            background-color: #8D95A6
+            border-radius: 50%
+            position: absolute
+            left: 0
+            top: 6px
+
+    > li:last-child
+      padding: 10px 20px 10px 50px
+
+      a
+        width: auto
+        margin-left: -10px
+        padding: 10px
+        font-size: 0.875rem
+
+  &__inner__last
+
+    > li
+
+      > a
+        padding: 10px 20px 10px 70px
+        line-height: normal
+        @include atSmall
+          line-height: 1.875rem
+
+        &.custom-line-height
+          line-height: 1

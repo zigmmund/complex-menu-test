@@ -1,0 +1,60 @@
+.primary-nav
+  display: none
+
+  @include atMedium
+    display: block
+    transform: scale(1)
+
+  &--centered
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+  > ul
+    margin: 0
+    padding: 0
+    @include clearfix
+
+  li
+    display: block
+    float: none
+    list-style: none
+
+    @include atMedium
+      float: left
+      padding: 0 45px 0 0
+      position: relative
+
+      &:hover
+        .submenu
+          display: flex
+
+        > a
+          color: rgba(255,255,255, .7)
+
+    &.last-menu-item
+      background-color: rgba(0,145,217, .5)
+      text-align: center
+
+      > a
+        padding: 15px 0
+        color: #0091D9
+
+      @include atMedium
+        background-color: transparent
+        text-align: left
+
+        > a
+          padding: 10px 0
+          color: #fff
+  a
+    color: #8C94A6
+    text-decoration: none
+    font-weight: 600
+    display: inline-block
+    padding: 30px 25px 0
+
+    @include atMedium
+      display: block
+      padding: 10px 0
+      color: #fff

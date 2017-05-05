@@ -1,0 +1,9 @@
+I"/(function() {
+  $(document).on('click', '[data-behavioir~=triggerMobileMenuContent]', function() {
+    $('[data-behavior~=menuContent]').toggleClass('site-header__menu-content--is-visible');
+    console.log(this);
+    return $(this).toggleClass('site-header__menu-icon--close-x');
+  });
+
+}).call(this);
+:ET

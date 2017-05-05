@@ -1,0 +1,79 @@
+.site-header
+
+  &__inner
+    height: 80px
+    border-bottom: 1px solid rgba(255,255,255, .2)
+    padding: 20px 0
+    @include clearfix
+
+  &__logo
+    position: absolute
+    width: 146px
+    height: 34px
+    background: url('icons/logotype') 50% 50% no-repeat
+
+
+  &__logo__graphic
+    text-indent: -9999px
+
+  &__menu-icon
+    width: 20px
+    height: 19px
+    position: absolute
+    top: 29px
+    right: 18px
+    z-index: 10
+    cursor: pointer
+    transition: all .3s ease-in
+    @include atMedium
+      display: none
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 20px
+      height: 3px
+      background-color: #fff
+      transform-origin: 0 0
+      transition: transform .3s ease-in
+
+    &__middle
+      position: absolute
+      top: 8px
+      left: 0
+      width: 20px
+      height: 3px
+      background-color: #fff
+      transition: all .3s ease-out
+      transform-origin: 0 50%
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 20px
+      height: 3px
+      background-color: #fff
+      transform-origin: 0 100%
+      transition: transform .3s ease-in
+
+  &__menu-icon--close-x
+    top: 49px
+    right: 33px
+    @include atSmall
+      right: 38px
+
+    &::before
+      background-color: #8C94A6
+      transform: rotate(45deg) scaleX(1.25)
+
+    .site-header__menu-icon__middle
+      opacity: 0
+      transform: scaleX(0)
+
+    &::after
+      background-color: #8C94A6
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px)

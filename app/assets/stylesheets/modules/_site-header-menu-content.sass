@@ -1,0 +1,64 @@
+.site-header__menu-content
+  transform: scale(1.2)
+  transition: transform .3s ease-in
+
+  @include atSmall
+    transform: scale(1)
+
+  @include clearfix
+
+  .btn-container
+    display: none
+
+    @include atSmall
+      float: right
+      margin-right: 45px
+      display: block
+
+    @include atMedium
+      margin-right: 0
+
+  &--is-visible
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 10px 30px 0
+    transform: scale(1)
+
+    .btn-container
+      display: block
+      padding: 20px 20px 0
+
+      @include atSmall
+        display: none
+
+      /* Begin mobile style */
+      .btn
+        margin-left: 10px
+        &:first-child
+          margin-left: 0
+        @include atSmall
+          margin-left: 20px
+
+        &--default
+          color: #0091D9
+          border-color: #0091D9
+          &:hover
+            color: #fff
+            background-color: #0091D9
+
+        &--green
+          &:hover
+            border-color: #00D34D
+
+    .primary-nav
+      display: block
+      width: 100%
+      position: relative
+      left: auto
+      transform: translateX(0)
+
+    .submenu
+      display: block
+      position: relative
+      top: auto
+      left: auto
